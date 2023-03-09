@@ -14,7 +14,13 @@ RSpec.describe 'Card' do
         expect(card.suit).to eq('Queen')
     end
 
-    it 'has a rank' do
-        expect(card.rank).to eq('spade')
+    #  // custom error message
+    it 'has a custom error message' do
+        comparison = 'spades'
+        expect(card.rank).to eq(comparison), "Expecting #{comparison} instead of #{card.rank}"
     end
+
+    # it 'has a rank' do
+    #     expect(card.rank).to eq('spade')
+    # end
 end
